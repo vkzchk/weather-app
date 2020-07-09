@@ -8,11 +8,16 @@ const forecast = (lalitude, longitude, cb) => {
     } else if (body.error) {
       cb('Unable to find location. Try another search.')
     } else {
-      const { weather_descriptions, temperature, feelslike } = body.current
+      const {
+        weather_descriptions,
+        temperature,
+        feelslike,
+        humidity,
+      } = body.current
 
       cb(
         '',
-        `${weather_descriptions[0]}. It is currently ${temperature} degress out. It feels like ${feelslike} degress out`
+        `${weather_descriptions[0]}. It is currently ${temperature} degress out. It feels like ${feelslike} degress out. The humidity is ${humidity}%.`
       )
     }
   })
