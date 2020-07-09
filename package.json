@@ -1,0 +1,17 @@
+{
+  "name": "web-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "server": "nodemon src/app.js --ext js,hbs"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.0.1",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
